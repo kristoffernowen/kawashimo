@@ -9,9 +9,9 @@ document.addEventListener('DOMContentLoaded', function() {
         
         const messages = [
             'Hello from Azure Static Web Apps! 🚀',
-            'You clicked me! Click count: ' + clickCount,
+            `You clicked me! Click count: ${clickCount}`,
             'Vanilla JS is awesome! 🎉',
-            'Keep clicking! You\'re at ' + clickCount + ' clicks!',
+            `Keep clicking! You're at ${clickCount} clicks!`,
             'This is hosted on Azure! ☁️'
         ];
         
