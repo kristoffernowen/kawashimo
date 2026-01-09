@@ -303,6 +303,7 @@ footer p {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
   animation: fadeIn 0.3s ease-in;
+  overflow-y: auto;
 }
 
 @keyframes fadeIn {
@@ -316,7 +317,7 @@ footer p {
 
 .modal-content {
   background: white;
-  margin: 5% auto;
+  margin: 20px auto;
   padding: 40px;
   border-radius: 10px;
   width: 90%;
@@ -342,6 +343,16 @@ footer p {
   margin-bottom: 20px;
   font-size: 2rem;
   text-align: center;
+}
+
+.step-counter {
+  display: none;
+  text-align: center;
+  color: #667eea;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+  margin-top: -10px;
 }
 
 .modal-content h3 {
@@ -379,9 +390,7 @@ footer p {
 }
 
 .modal.show {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
 }
 
 .feature-card {
@@ -497,15 +506,91 @@ footer p {
 }
 
 @media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+
+  header {
+    padding: 20px 10px;
+  }
+
   header h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
+  }
+
+  #hammer-man {
+    height: 3rem;
+    width: 3rem;
+  }
+
+  main {
+    padding: 20px 10px;
+  }
+
+  .hero {
+    margin-bottom: 30px;
   }
 
   .hero p {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 
   .features {
     grid-template-columns: 1fr;
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+
+  .feature-card {
+    padding: 20px;
+  }
+
+  .feature-card h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  .feature-card p {
+    font-size: 0.9rem;
+  }
+
+  .cta-button {
+    padding: 12px 30px;
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+
+  .message {
+    font-size: 1rem;
+  }
+
+  footer {
+    padding: 20px 10px;
+  }
+
+  footer p {
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+  }
+
+  .footer-logos {
+    gap: 15px;
+  }
+
+  .step-indicator {
+    display: none;
+  }
+
+  .step-counter {
+    display: block;
+  }
+
+  .contact-method br {
+    display: none;
   }
 }
