@@ -71,6 +71,9 @@ document.addEventListener("DOMContentLoaded", function () {
       // Update button visibility
       prevButton.style.display = currentStep === 1 ? "none" : "block";
       nextButton.style.display = currentStep === totalSteps ? "none" : "block";
+
+      // Scroll modal to top
+      modal1.scrollTop = 0;
     }
 
     nextButton.addEventListener("click", function () {
@@ -108,6 +111,9 @@ document.addEventListener("DOMContentLoaded", function () {
       // Update button visibility
       prevButton.style.display = currentStep === 1 ? "none" : "block";
       nextButton.style.display = currentStep === totalSteps ? "none" : "block";
+
+      // Scroll modal to top
+      modal3.scrollTop = 0;
     }
 
     nextButton.addEventListener("click", function () {
