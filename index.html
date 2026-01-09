@@ -9,37 +9,218 @@
 <body>
     <div class="container">
         <header>
-            <h1>Welcome to Kawashimo</h1>
+            <h1>Välkommen till Bujinkan Kawashimo Dojo <img id="hammer-man" src="images/hammer-man.svg" alt="Kawashimo Logo" class="hero-image"></h1>
         </header>
         
         <main>
-            <section class="hero">
-                <img src="images/placeholder.svg" alt="Hero image" class="hero-image">
-                <p>A simple vanilla JavaScript project hosted on Azure Static Web Apps.</p>
-            </section>
+           <!--  <section class="hero">
+            </section> -->
             
             <section class="features">
-                <div class="feature-card">
-                    <h2>Fast</h2>
-                    <p>Lightning-fast static content delivery</p>
+                <div class="feature-card" data-modal="modal1">
+                    <h2>Bujinkan Budo Taijutsu</h2>
+                    <!-- <p>Lightning-fast static content delivery</p> -->
                 </div>
-                <div class="feature-card">
-                    <h2>Simple</h2>
-                    <p>No build tools or frameworks required</p>
+                <div class="feature-card" data-modal="modal2">
+                    <h2>Kawashimo Dojo</h2>
+                    <!-- <p>No build tools or frameworks required</p> -->
                 </div>
-                <div class="feature-card">
-                    <h2>Scalable</h2>
-                    <p>Azure's global CDN infrastructure</p>
+                <div class="feature-card" data-modal="modal3">
+                    <h2>Börja träna</h2>
+                    <!-- <p>Azure's global CDN infrastructure</p> -->
                 </div>
             </section>
             
-            <button id="clickMe" class="cta-button">Click Me!</button>
+            <button id="clickMe" class="cta-button" data-modal="modal4">Kontakt</button>
             <p id="message" class="message"></p>
         </main>
         
         <footer>
-            <p>&copy; 2026 Kawashimo. Powered by Azure Static Web Apps.</p>
+            <p>&copy; 2026 Bujinkan Kawashimo Dojo Västerås</p>
+            <div class="footer-logos">
+                <a href="http://www.bujinkan.com/" class="logo-link" data-label="medlem i bujinkan honbu">
+                    <img src="images/bujinkan_honbu_small.gif" height="44" width="44" alt="medlem i bujinkan honbu"/>
+                </a>
+                <a href="http://www.rf.se/" class="logo-link" data-label="medlem i riksidrottsförbundet">
+                    <img src="images/riksidrottsfb_small.gif" height="44" width="44" alt="medlem i riksidrottsförbundet"/>
+                </a>
+                <a href="http://www.budokampsport.se" class="logo-link" data-label="medlem i svenska budo- och kampsportsförbundet">
+                    <img src="images/budo_kampsport_small.gif" height="44" width="44" alt="medlem i svenska budo- och kampsportsförbundet"/>
+                </a>
+            </div>
         </footer>
+    </div>
+
+    <!-- Modal 1: Bujinkan Budo Taijutsu - Multi-step -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            
+            <!-- Step 1: Main info -->
+            <div class="modal-step active" data-step="1">
+                <h2>Bujinkan Budo Taijutsu</h2>
+                <div class="step-counter">1 av 3</div>
+                <p>Vi tränar Bujinkan Budo Taijutsu (Ninjutsu). En traditionell japansk kampkonst med tusenåriga rötter.</p>
+                <p>Dr Hatsumi Masaaki ärvde nio olika ryu (skolor) och samlade de i en organisation kallad Bujinkan. Bujinkan budo taijutsu är namnet på det vi tränar, essensen av de nio skolorna. Det är traditionella skolor från Japan baserade på gamla stridtstekniker. De innehåller obeväpnade tekniker med kast, grepp, slag, sparkar och fallteknik. Skolorna har dessutom vapentekniker som bygger på rörelseschemat man lärt sig under den obeväpnade träningen. Tanken är att lära sig använda kropp och sinne på ett naturligt och strategiskt sätt. Träningen syftar till att lära dig självförsvar samt att leda till fysisk och mental utveckling.</p>
+            </div>
+            
+            <!-- Step 2: De nio skolorna -->
+            <div class="modal-step" data-step="2">
+                <h2>De nio skolorna (Ryu)</h2>
+                <div class="step-counter">2 av 3</div>
+                <ul class="schools-list">
+                    <li>Togakure ryu ninpo</li>
+                    <li>Gyokko ryu koshijutsu</li>
+                    <li>Kukishinden ryu happo hiken</li>
+                    <li>Shinden fudo ryu dakentaijutsu</li>
+                    <li>Gyokushin ryu ninpo</li>
+                    <li>Koto ryu koppojutsu</li>
+                    <li>Takagi yoshin ryu jutaijutsu</li>
+                    <li>Gikan ryu koppojutsu</li>
+                    <li>Kumogakure ryu ninpo</li>
+                </ul>
+            </div>
+            
+            <!-- Step 3: Länkarna -->
+            <div class="modal-step" data-step="3">
+                <h2>Läs mer</h2>
+                <div class="step-counter">3 av 3</div>
+                <ul class="links-list">
+                    <li><a href="http://www.bujinkan.se" target="_blank" title="läs mer på bujinkan.se">www.bujinkan.se</a> - Svensk huvudsajt</li>
+                    <li><a href="http://www.bujinkan.com" target="_blank" title="läs mer på bujinkan.com">www.bujinkan.com</a> - Internationell huvudsajt</li>
+                    <li><a href="https://www.facebook.com/kawashimodojo" target="_blank" title="läs mer på facebook">Facebook</a> - Vår dojo</li>
+                </ul>
+            </div>
+            
+            <!-- Navigation -->
+            <div class="modal-navigation">
+                <button class="nav-button prev-button" style="display: none;">← Föregående</button>
+                <span class="step-indicator"><span class="current-step">1</span> av <span class="total-steps">3</span></span>
+                <button class="nav-button next-button">Nästa →</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2: Kawashimo Dojo -->
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2>Kawashimo Dojo Västerås</h2>
+            <h3>Historia</h3>
+            <p>Kawashimo Dojos historia börjar i Hallstahmmar men våren 2007 flyttade kawashimo till Västerås. I västerås har vi varit på olika platser men nu tränar vi med Västerås Judoklubb på Lugna gatan 16.</p>
+            <h3>Organisation</h3>
+            <p>Föreningen drivs ideellt där alla inkomster går till hyra och material. Verksamheten redovisas på ett årsmöte där alla medlemmar är välkomna.</p>
+            <h3>Instruktör</h3>
+            <p>Kristoffer Nowén, 10 dan Shidoshi<br>Telefon: 076-107 33 34</p>
+        </div>
+    </div>
+
+    <!-- Modal 3: Börja träna - Multi-step -->
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            
+            <!-- Step 1: Introduktion & Tider -->
+            <div class="modal-step active" data-step="1">
+                <h2>Börja träna</h2>
+                <div class="step-counter">1 av 4</div>
+                <p>Vill du prova något nytt? Kom och prova på! Vi tar in nybörjare löpande.</p>
+                <h3>Träningtider</h3>
+                <div class="training-table">
+                    <div class="table-row">
+                        <div class="table-cell header">Dag</div>
+                        <div class="table-cell header">Tid</div>
+                    </div>
+                    <div class="table-row">
+                        <div class="table-cell">Onsdag</div>
+                        <div class="table-cell">19:00 - 20:30</div>
+                    </div>
+                    <div class="table-row">
+                        <div class="table-cell">Söndag</div>
+                        <div class="table-cell">18:30 - 20:00</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Step 2: Plats -->
+            <div class="modal-step" data-step="2">
+                <h2>Var tränar vi?</h2>
+                <div class="step-counter">2 av 4</div>
+                <h3>Plats</h3>
+                <p>Vi tränar på Lugna gatan 16 (baksidan av byggnad 391 Finnslätten, bredvid Friskis), Västerås. Följ skyltningen till Västerås Judoklubb. Vi delar matta med Judon.</p>
+            </div>
+            
+            <!-- Step 3: Kostnad & Utrustning -->
+            <div class="modal-step" data-step="3">
+                <h2>Kostnad & Utrustning</h2>
+                <div class="step-counter">3 av 4</div>
+                <h3>Avgifter</h3>
+                <p>Vi samarbetar med Västerås Judoklubb och tränar på deras matta och tider. Du behöver betala medlemsavgift en gång per år till Kawashimo och träningsavgift varje termin till Västerås Judoklubb.</p>
+                <p><strong>Medlemsavgift:</strong> 300 kr/år till Kawashimo<br>
+                <strong>Träningsavgift:</strong> 600 kr/termin till Västerås Judoklubb (för 26+)<br>
+                <strong>Provträning:</strong> Gratis några gånger innan du bestämmer dig!</p>
+                <p>Medlemsavgiften på 300 kr betalas via bankgiro 5945-2482. Skriv namn i meddelandet.</p>
+                <h3>Utrustning</h3>
+                <p>För nybörjarträning behövs bara långa träningsbyxor och t-shirt, eller en gammal GI. Vi rekommenderar att skaffa en svart GI efter första graderingen. Om du har GI i annan färg sedan tidigare fungerar det utmärkt, annars passar långbyxor och tröja perfekt.</p>
+            </div>
+            
+            <!-- Step 4: Åldersgräns & Kontakt -->
+            <div class="modal-step" data-step="4">
+                <h2>Information & Kontakt</h2>
+                <div class="step-counter">4 av 4</div>
+                <h3>Åldersgräns</h3>
+                <p>Åldersgräns 15 år.</p>
+                <h3>Kontakt</h3>
+                <p>Har du frågor? Kontakta oss på:</p>
+                <div class="contact-methods">
+                    <!-- <div class="contact-method">
+                        <strong>Email:</strong><br>
+                        the mail
+                    </div> -->
+                    <div class="contact-method">
+                        <strong>Telefon:</strong><br>
+                        Kristoffer 076-107 33 34
+                    </div>
+                    <div class="contact-method">
+                        <strong>Facebook:</strong><br>
+                        <a href="https://www.facebook.com/kawashimodojo" target="_blank" class="social-link">Kawashimo Dojo Facebook</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Navigation -->
+            <div class="modal-navigation">
+                <button class="nav-button prev-button" style="display: none;">← Föregående</button>
+                <span class="step-indicator"><span class="current-step">1</span> av <span class="total-steps">4</span></span>
+                <button class="nav-button next-button">Nästa →</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 4: Kontakt -->
+    <div id="modal4" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2>Kontakta oss</h2>
+            <h3>Instruktör</h3>
+            <div class="contact-info">
+                <p><strong>Kristoffer Nowén</strong><br>
+                10 dan Shidoshi</p>
+                <!-- <p><strong>Email:</strong> the mail<br> -->
+                <strong>Telefon:</strong> 076-107 33 34</p>
+            </div>
+            <!-- <h3>Dojo</h3>
+            <div class="contact-info">
+                <p><strong>Email:</strong> bjorn(at)bjorn ???</p>
+            </div> -->
+            <h3>Dojon via Facebook</h3>
+            <div class="contact-social">
+                <p>Lär känna oss lite mer!</p>
+                <a href="https://www.facebook.com/kawashimodojo" target="_blank" class="facebook-link">
+                    Gå till vår Facebook-grupp
+                </a>
+            </div>
+        </div>
     </div>
     
     <script src="script.js"></script>
